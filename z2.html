@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тюлячкина Мария</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .formula {
+            font-weight: bold;
+        }
+        .developer {
+            margin-top: 20px;
+            font-size: small;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Домашнее задание по физике и математике</h1>
+    <p>Задача 1: Рассчитать Скорость в конце пути и путь, пройденный телом за время t с ускорением a и начальной скорости v0.</p>
+    <img src="F1.png" alt="Формула скорости и пути" class="formula">
+    <p>Задача 2: Рассчитать значение функции b.</p>
+    <img src="F2.png" alt="Формула функции b" class="formula">
+    <script>
+        const v0 = parseFloat(prompt("Введите начальную скорость v0 (м/с):"));
+        const a = parseFloat(prompt("Введите ускорение a (м/с^2):"));
+        const t = parseFloat(prompt("Введите время t (с):"));
+        const v = v0 + a * t;
+        const S = v0 * t + Math.pow(a * t, 2) / 2;
+        const x = parseFloat(prompt("Введите значение x:"));
+        const y = parseFloat(prompt("Введите значение y:"));
+        const z = parseFloat(prompt("Введите значение z:"));
+        const b = 1 + ((Math.pow(x, 2) + 1) / (3 + Math.pow(y, 2))) + Math.sin(2 * z);
+        document.write("<p>Результаты:</p>");
+        document.write("<p>Конечная скорость: " + v.toFixed(2) + " м/с</p>");
+        document.write("<p>Пройденный путь: " + S.toFixed(2) + " м</p>");
+        document.write("<p>Значение функции b: " + b.toFixed(4) + "</p>");
+        document.write('<div class="developer">Разработано: Тюлячкина Мария гр. 1216</div>');
+    </script>
+</body>
+</html>
